@@ -22,6 +22,7 @@ body{background:var(--body-bg);display:flex;flex-direction:column;align-items:ce
 .card-front .slogan{font-family:'Playfair Display',serif;font-weight:400;font-style:italic;font-size:11px;color:rgba(255,255,255,0.5);letter-spacing:0.5px;line-height:1.7;}
 .card-front .doctor-name{font-family:'Playfair Display',serif;font-weight:600;font-size:11.5px;color:#ffffff;letter-spacing:0.3px;line-height:1.3;}
 .card-front .doctor-title{font-family:'Raleway',sans-serif;font-weight:400;font-size:8px;color:var(--accent);letter-spacing:1px;text-transform:uppercase;margin-top:0;}
+.card-front .doctor-block{display:flex;flex-direction:column;gap:2px;}
 .card-front .col-right{width:44%;padding:20px 22px 18px 10px;display:flex;flex-direction:column;justify-content:space-between;align-items:flex-end;}
 .card-front .contacts{display:flex;flex-direction:column;gap:9px;width:100%;}
 .card-front .contact-row{display:flex;align-items:center;gap:8px;}
