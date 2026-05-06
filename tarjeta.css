@@ -53,6 +53,7 @@ body{background:var(--body-bg);display:flex;flex-direction:column;align-items:ce
 .card-back .qr-phone-box{width:58px;height:58px;background:white;border-radius:7px;padding:4px;}
 .card-back .qr-phone-box canvas,.card-back .qr-phone-box img{width:100%!important;height:100%!important;}
 .card-back .qr-phone-lbl{font-size:6.5px;color:rgba(255,255,255,0.4);letter-spacing:1px;text-transform:uppercase;}
+.card-back .back-slogan{font-family:'Playfair Display',serif;font-size:7.5px;font-style:italic;color:rgba(255,255,255,0.4);text-align:center;line-height:1.5;margin-top:4px;}
 .card-back .right-content{position:absolute;right:0;top:0;width:calc(100% - 195px);height:100%;display:flex;flex-direction:column;justify-content:center;padding:14px 20px 12px 22px;gap:7px;z-index:2;}
 .card-back .r-title{font-family:'Playfair Display',serif;font-size:13px;font-weight:700;color:var(--title-color);letter-spacing:0.5px;padding-bottom:6px;border-bottom:2px solid var(--border-color);}
 .card-back .r-grid{display:grid;grid-template-columns:1fr 1fr;gap:3px 10px;}
