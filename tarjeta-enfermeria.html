@@ -1,0 +1,173 @@
+﻿<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/><title>Tarjeta Enfermeria</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="tarjeta.css"></head><body>
+<p class="page-title">Tarjeta Personalizada; Servicios de Enfermeria; Laura Sarahel</p>
+
+<!-- SELECTOR DE TEMAS -->
+<div class="theme-selector">
+  <span class="theme-label">Elige tu diseno</span>
+  <div class="theme-options">
+    <button class="theme-btn active" onclick="setTheme('ocean')" id="btn-ocean">
+      <div class="theme-preview" id="prev-ocean"></div>
+      <span class="theme-name-lbl">Oceano</span>
+    </button>
+    <button class="theme-btn" onclick="setTheme('geo')" id="btn-geo">
+      <div class="theme-preview" id="prev-geo"></div>
+      <span class="theme-name-lbl">Geometrico</span>
+    </button>
+    <button class="theme-btn" onclick="setTheme('rose')" id="btn-rose">
+      <div class="theme-preview" id="prev-rose"></div>
+      <span class="theme-name-lbl">Azul Marino</span>
+    </button>
+    <button class="theme-btn" onclick="setTheme('night')" id="btn-night">
+      <div class="theme-preview" id="prev-night"></div>
+      <span class="theme-name-lbl">Turquesa</span>
+    </button>
+  </div>
+</div>
+
+<!-- FRENTE -->
+<div class="card-wrapper">
+<span class="label">-- Frente --</span>
+<div class="card card-front" id="card-front">
+<svg id="svg-front" style="position:absolute;inset:0;width:100%;height:100%;z-index:0;" viewBox="0 0 525 300" xmlns="http://www.w3.org/2000/svg"></svg>
+<div class="layout">
+  <div class="col-left">
+    <div class="brand">
+      <svg id="icon-box-svg" width="32" height="32" viewBox="0 0 32 32" style="margin-bottom:8px;display:block;" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="iconGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop id="ig2a" offset="0%"/><stop id="ig2b" offset="100%"/>
+          </linearGradient>
+          <filter id="iconGlow2" x="-40%" y="-40%" width="180%" height="180%">
+            <feGaussianBlur stdDeviation="3" result="blur"/>
+            <feFlood id="igf2" flood-opacity="0.55" result="color"/>
+            <feComposite in="color" in2="blur" operator="in" result="shadow"/>
+            <feMerge><feMergeNode in="shadow"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+        </defs>
+        <rect x="0" y="0" width="32" height="32" rx="7" fill="url(#iconGrad2)" filter="url(#iconGlow2)"/>
+        <text x="16" y="23" text-anchor="middle" font-size="20" font-weight="900" fill="white" font-family="Arial">+</text>
+      </svg>
+      <div class="biz-name">Servicios de<br><span>Enfermeria</span></div>
+      <div class="tagline">Atencion profesional &middot; A domicilio</div>
+    </div>
+    <div class="divider"></div>
+    <div class="slogan">Cuidamos tu salud<br>con dedicacion y confianza</div>
+  </div>
+  <div class="col-right">
+    <div class="contacts">
+      <div class="contact-row">
+        <div class="c-icon" id="ci1">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path id="wa-f" d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.978-1.418A9.955 9.955 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/>
+            <path fill="#fff" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+          </svg>
+        </div>
+        <div class="c-text"><span class="c-label">WhatsApp / Llamadas</span><span class="c-value">64002307</span></div>
+      </div>
+      <div class="contact-row">
+        <div class="c-icon" id="ci2">
+          <svg viewBox="0 0 24 24"><path id="pin-f" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+        </div>
+        <div class="c-text"><span class="c-label">Direccion</span><span class="c-value">Zona 16 de Julio, Calle Beltran 2736</span></div>
+      </div>
+      <div class="contact-row">
+        <div class="c-icon" id="ci3">
+          <svg viewBox="0 0 24 24"><path id="globe-f" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+        </div>
+        <div class="c-text"><span class="c-label">Ciudad</span><span class="c-value">La Paz &middot; El Alto, Bolivia</span></div>
+      </div>
+    </div>
+    <div class="qr-wrap">
+      <div class="qr-header">
+        <svg viewBox="0 0 24 24"><path id="qrpin-f" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+        <span>Ubicacion</span>
+      </div>
+      <div class="qr-box" id="qr-front"></div>
+      <span class="qr-txt">Escanear para ver mapa</span>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+<!-- REVERSO -->
+<div class="card-wrapper">
+<span class="label">-- Reverso --</span>
+<div class="card card-back" id="card-back">
+<div class="bg-back" id="bg-back-el"></div>
+<svg id="svg-back" style="position:absolute;inset:0;width:100%;height:100%;z-index:1;" viewBox="0 0 525 300" xmlns="http://www.w3.org/2000/svg"></svg>
+<div class="left-content">
+  <svg id="logo-ring-svg" width="56" height="56" viewBox="0 0 56 56" style="flex-shrink:0;" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="logoGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop id="lg2a" offset="0%"/><stop id="lg2b" offset="100%"/>
+      </linearGradient>
+      <filter id="logoGlow2" x="-40%" y="-40%" width="180%" height="180%">
+        <feGaussianBlur stdDeviation="5" result="blur"/>
+        <feFlood id="lgf2" flood-opacity="0.55" result="color"/>
+        <feComposite in="color" in2="blur" operator="in" result="shadow"/>
+        <feMerge><feMergeNode in="shadow"/><feMergeNode in="SourceGraphic"/></feMerge>
+      </filter>
+    </defs>
+    <circle cx="28" cy="28" r="28" fill="url(#logoGrad2)" filter="url(#logoGlow2)"/>
+    <text x="28" y="37" text-anchor="middle" font-size="28" font-weight="900" fill="white" font-family="Arial">+</text>
+  </svg>
+  <div class="back-biz">
+    <div class="back-biz-name">Servicios<br><span>Enfermeria</span></div>
+    <div class="back-sub">Salud &middot; Cuidado &middot; Confianza</div>
+  </div>
+  <div class="qr-phone-wrap">
+    <div class="qr-phone-header">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path fill="#25D366" d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.978-1.418A9.955 9.955 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/>
+        <path fill="#fff" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+      </svg>
+      <span>WhatsApp</span>
+    </div>
+    <div class="qr-phone-box" id="qr-back"></div>
+    <span class="qr-phone-lbl">Escanear para escribir</span>
+  </div>
+</div>
+<div class="right-content">
+  <div class="r-title">Nuestros Servicios</div>
+  <div class="r-grid">
+    <div class="r-item"><div class="dot"></div>Inyectables</div>
+    <div class="r-item"><div class="dot"></div>Curaciones</div>
+    <div class="r-item"><div class="dot"></div>Signos vitales</div>
+    <div class="r-item"><div class="dot"></div>Sueroterapia</div>
+    <div class="r-item"><div class="dot"></div>Glicemia</div>
+    <div class="r-item"><div class="dot"></div>Laboratorios</div>
+    <div class="r-item"><div class="dot"></div>Toma a domicilio</div>
+    <div class="r-item"><div class="dot"></div>Prueba embarazo</div>
+    <div class="r-item"><div class="dot"></div>Papanicolau</div>
+    <div class="r-item"><div class="dot"></div>Cert. medicos</div>
+  </div>
+  <div class="r-footer">
+    <div class="r-footer-info">
+      <div class="phone-row">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path fill="#25D366" d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.978-1.418A9.955 9.955 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/>
+          <path fill="#fff" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+        </svg>
+        <span class="phone">64002307</span>
+      </div>
+      <span class="city">Zona 16 de Julio, Calle Beltran 2736</span>
+      <span class="city">La Paz &middot; El Alto, Bolivia</span>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+<div class="btn-row">
+  <button class="btn btn-pdf" id="btn-pdf" onclick="descargarPDF()">&#11015; Descargar PDF</button>
+  <button class="btn btn-print" onclick="window.print()">&#128424; Imprimir</button>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="tarjeta.js"></script>
+</body></html>
+
