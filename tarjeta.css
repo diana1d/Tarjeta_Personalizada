@@ -50,10 +50,10 @@ body{background:var(--body-bg);display:flex;flex-direction:column;align-items:ce
 .card-back .qr-phone-box{width:58px;height:58px;background:white;border-radius:7px;padding:4px;}
 .card-back .qr-phone-box canvas,.card-back .qr-phone-box img{width:100%!important;height:100%!important;}
 .card-back .qr-phone-lbl{font-size:6.5px;color:rgba(255,255,255,0.4);letter-spacing:1px;text-transform:uppercase;}
-.card-back .right-content{position:absolute;right:0;top:0;width:calc(100% - 195px);height:100%;display:flex;flex-direction:column;justify-content:center;padding:18px 22px 16px 24px;gap:10px;z-index:2;}
-.card-back .r-title{font-family:'Playfair Display',serif;font-size:13px;font-weight:700;color:var(--title-color);letter-spacing:0.5px;padding-bottom:7px;border-bottom:2px solid var(--border-color);}
-.card-back .r-grid{display:grid;grid-template-columns:1fr 1fr;gap:5px 14px;}
-.card-back .r-item{display:flex;align-items:center;gap:6px;font-family:'Playfair Display',serif;font-size:10px;color:var(--item-color);font-weight:600;font-style:normal;letter-spacing:0.3px;}
+.card-back .right-content{position:absolute;right:0;top:0;width:calc(100% - 195px);height:100%;display:flex;flex-direction:column;justify-content:center;padding:14px 20px 12px 22px;gap:7px;z-index:2;}
+.card-back .r-title{font-family:'Playfair Display',serif;font-size:13px;font-weight:700;color:var(--title-color);letter-spacing:0.5px;padding-bottom:6px;border-bottom:2px solid var(--border-color);}
+.card-back .r-grid{display:grid;grid-template-columns:1fr 1fr;gap:3px 10px;}
+.card-back .r-item{display:flex;align-items:center;gap:5px;font-family:'Playfair Display',serif;font-size:9px;color:var(--item-color);font-weight:600;font-style:normal;letter-spacing:0.2px;white-space:nowrap;}
 .card-back .r-item .dot{width:5px;height:5px;border-radius:50%;background:var(--accent);flex-shrink:0;}
 .card-back .r-footer{display:flex;align-items:center;justify-content:space-between;padding-top:8px;border-top:1px solid rgba(13,35,71,0.12);}
 .card-back .r-footer-info{display:flex;flex-direction:column;gap:2px;}
