@@ -333,23 +333,15 @@ async function descargarPDF() {
   // Tamaño exacto 9 x 5 cm
   const W_mm = 90, H_mm = 50;
 
-  // Capturar a escala alta para calidad de impresion
-  const cardEl = document.querySelector(".card-front");
-  const cardW = cardEl.offsetWidth;   // 540px
-  const cardH = cardEl.offsetHeight;  // 300px
-
-  // scale = pixeles necesarios para 300dpi / pixeles actuales
-  // 90mm a 300dpi = 90/25.4*300 = 1063px → scale = 1063/540 ≈ 1.97 → usamos 2
+  // scale:4 = ~300dpi al imprimir en 9x5cm → imagen nitida sin borrosidad
   const opts = {
-    scale: 2,
+    scale: 4,
     useCORS: true,
     allowTaint: true,
     backgroundColor: null,
     logging: false,
     imageTimeout: 0,
-    foreignObjectRendering: false,
-    width: cardW,
-    height: cardH
+    foreignObjectRendering: false
   };
 
   const pdf = new jsPDF({ orientation:"landscape", unit:"mm", format:[W_mm, H_mm] });
