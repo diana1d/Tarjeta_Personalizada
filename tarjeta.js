@@ -330,15 +330,38 @@ async function descargarPDF() {
   await new Promise(r => setTimeout(r, 500));
 
   const { jsPDF } = window.jspdf;
-  const W = 90, H = 50; // 9 x 5 cm
-  const opts = { scale:4, useCORS:true, allowTaint:true, backgroundColor:null, logging:false, imageTimeout:0, foreignObjectRendering:false };
+  // Tamaño exacto 9 x 5 cm
+  const W_mm = 90, H_mm = 50;
 
-  const pdf = new jsPDF({ orientation:"landscape", unit:"mm", format:[W,H] });
+  // Capturar a escala alta para calidad de impresion
+  const cardEl = document.querySelector(".card-front");
+  const cardW = cardEl.offsetWidth;   // 540px
+  const cardH = cardEl.offsetHeight;  // 300px
+
+  // scale = pixeles necesarios para 300dpi / pixeles actuales
+  // 90mm a 300dpi = 90/25.4*300 = 1063px → scale = 1063/540 ≈ 1.97 → usamos 2
+  const opts = {
+    scale: 2,
+    useCORS: true,
+    allowTaint: true,
+    backgroundColor: null,
+    logging: false,
+    imageTimeout: 0,
+    foreignObjectRendering: false,
+    width: cardW,
+    height: cardH
+  };
+
+  const pdf = new jsPDF({ orientation:"landscape", unit:"mm", format:[W_mm, H_mm] });
+
+  // Pagina 1: Frente
   const c1 = await html2canvas(document.querySelector(".card-front"), opts);
-  pdf.addImage(c1.toDataURL("image/png",1.0), "PNG", 0, 0, W, H);
-  pdf.addPage([W,H], "landscape");
+  pdf.addImage(c1.toDataURL("image/png", 1.0), "PNG", 0, 0, W_mm, H_mm);
+
+  // Pagina 2: Reverso
+  pdf.addPage([W_mm, H_mm], "landscape");
   const c2 = await html2canvas(document.querySelector(".card-back"), opts);
-  pdf.addImage(c2.toDataURL("image/png",1.0), "PNG", 0, 0, W, H);
+  pdf.addImage(c2.toDataURL("image/png", 1.0), "PNG", 0, 0, W_mm, H_mm);
 
   const name = THEMES[currentTheme].name.toLowerCase().replace(/ /g,'-');
   pdf.save(`tarjeta-${name}.pdf`);
