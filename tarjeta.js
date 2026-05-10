@@ -27,13 +27,13 @@ const THEMES = {
           <stop offset="100%" stop-color="#1565c0" stop-opacity="0"/>
         </radialGradient>
       </defs>
-      <rect width="525" height="300" fill="url(#bg)"/>
+      <rect width="540" height="300" fill="url(#bg)"/>
       <rect width="4" height="300" fill="url(#bar)"/>
       <ellipse cx="430" cy="60" rx="160" ry="160" fill="url(#glow)"/>
-      <path d="M0,0 L525,0 L525,90 Q410,130 300,100 Q190,70 0,110 Z" fill="${a}" fill-opacity="0.07"/>
-      <path d="M0,300 L525,300 L525,210 Q400,180 290,200 Q180,220 0,190 Z" fill="#1565c0" fill-opacity="0.1"/>
-      <path d="M0,150 Q130,120 260,140 Q390,160 525,130" stroke="${a}" stroke-opacity="0.15" stroke-width="1" fill="none"/>
-      <path d="M0,170 Q130,145 260,162 Q390,180 525,152" stroke="${a}" stroke-opacity="0.07" stroke-width="1" fill="none"/>
+      <path d="M0,0 L540,0 L540,90 Q425,130 310,100 Q195,70 0,110 Z" fill="${a}" fill-opacity="0.07"/>
+      <path d="M0,300 L540,300 L540,210 Q415,180 300,200 Q185,220 0,190 Z" fill="#1565c0" fill-opacity="0.1"/>
+      <path d="M0,150 Q135,120 268,140 Q400,160 540,130" stroke="${a}" stroke-opacity="0.15" stroke-width="1" fill="none"/>
+      <path d="M0,170 Q135,145 268,162 Q400,180 540,152" stroke="${a}" stroke-opacity="0.07" stroke-width="1" fill="none"/>
       <text x="240" y="220" font-size="200" font-weight="900" fill="white" fill-opacity="0.03" font-family="Arial">+</text>`,
     backBg: (a,a2) => `
       <defs>
@@ -75,7 +75,7 @@ const THEMES = {
           <stop offset="100%" stop-color="${a2}"/>
         </linearGradient>
       </defs>
-      <rect width="525" height="300" fill="url(#bg)"/>
+      <rect width="540" height="300" fill="url(#bg)"/>
       <rect width="4" height="300" fill="url(#bar)"/>
       <!-- Rombos decorativos -->
       <polygon points="480,10 510,50 480,90 450,50" fill="none" stroke="${a}" stroke-opacity="0.25" stroke-width="1"/>
@@ -83,7 +83,7 @@ const THEMES = {
       <polygon points="430,160 470,200 430,240 390,200" fill="none" stroke="${a}" stroke-opacity="0.12" stroke-width="1"/>
       <polygon points="30,200 60,240 30,280 0,240" fill="none" stroke="${a}" stroke-opacity="0.1" stroke-width="1"/>
       <!-- Lineas diagonales -->
-      <line x1="0" y1="0" x2="525" y2="300" stroke="${a}" stroke-opacity="0.04" stroke-width="60"/>
+      <line x1="0" y1="0" x2="540" y2="300" stroke="${a}" stroke-opacity="0.04" stroke-width="60"/>
       <line x1="-60" y1="0" x2="465" y2="300" stroke="${a}" stroke-opacity="0.03" stroke-width="40"/>
       <!-- Linea acento horizontal -->
       <line x1="26" y1="280" x2="260" y2="280" stroke="${a}" stroke-opacity="0.3" stroke-width="1"/>
@@ -138,14 +138,14 @@ const THEMES = {
           <stop offset="100%" stop-color="#112540" stop-opacity="0"/>
         </radialGradient>
       </defs>
-      <rect width="525" height="300" fill="url(#bg)"/>
+      <rect width="540" height="300" fill="url(#bg)"/>
       <rect width="4" height="300" fill="url(#bar)"/>
       <ellipse cx="440" cy="50" rx="150" ry="150" fill="url(#glow)"/>
       <circle cx="460" cy="150" r="120" fill="none" stroke="${a}" stroke-opacity="0.08" stroke-width="1"/>
       <circle cx="460" cy="150" r="80" fill="none" stroke="${a}" stroke-opacity="0.06" stroke-width="1"/>
       <circle cx="460" cy="150" r="40" fill="${a}" fill-opacity="0.04"/>
-      <path d="M0,80 Q200,40 400,80 Q480,100 525,70 L525,0 L0,0 Z" fill="${a}" fill-opacity="0.05"/>
-      <path d="M0,220 Q200,260 400,220 Q480,200 525,230 L525,300 L0,300 Z" fill="${a2}" fill-opacity="0.1"/>
+      <path d="M0,80 Q200,40 400,80 Q495,100 540,70 L540,0 L0,0 Z" fill="${a}" fill-opacity="0.05"/>
+      <path d="M0,220 Q200,260 400,220 Q495,200 540,230 L540,300 L0,300 Z" fill="${a2}" fill-opacity="0.1"/>
       <path d="M26,270 Q150,260 280,270" stroke="${a}" stroke-opacity="0.2" stroke-width="1" fill="none"/>
       <text x="200" y="230" font-size="200" font-weight="900" fill="white" fill-opacity="0.025" font-family="Arial">+</text>`,
     backBg: (a,a2) => `
@@ -195,15 +195,15 @@ const THEMES = {
           <stop offset="100%" stop-color="#124040" stop-opacity="0"/>
         </radialGradient>
       </defs>
-      <rect width="525" height="300" fill="url(#bg)"/>
+      <rect width="540" height="300" fill="url(#bg)"/>
       <rect width="4" height="300" fill="url(#bar)"/>
       <ellipse cx="420" cy="70" rx="150" ry="150" fill="url(#glow)"/>
       <!-- Triangulos angulares -->
-      <polygon points="525,0 525,120 380,0" fill="${a}" fill-opacity="0.07"/>
-      <polygon points="525,300 525,180 380,300" fill="${a2}" fill-opacity="0.09"/>
+      <polygon points="540,0 540,120 395,0" fill="${a}" fill-opacity="0.07"/>
+      <polygon points="540,300 540,180 395,300" fill="${a2}" fill-opacity="0.09"/>
       <!-- Lineas angulares -->
-      <line x1="300" y1="0" x2="525" y2="180" stroke="${a}" stroke-opacity="0.1" stroke-width="1"/>
-      <line x1="320" y1="0" x2="525" y2="160" stroke="${a}" stroke-opacity="0.06" stroke-width="1"/>
+      <line x1="300" y1="0" x2="540" y2="180" stroke="${a}" stroke-opacity="0.1" stroke-width="1"/>
+      <line x1="320" y1="0" x2="540" y2="160" stroke="${a}" stroke-opacity="0.06" stroke-width="1"/>
       <line x1="0" y1="200" x2="200" y2="300" stroke="${a}" stroke-opacity="0.07" stroke-width="1"/>
       <!-- Hexagono sutil -->
       <polygon points="470,80 495,95 495,125 470,140 445,125 445,95" fill="none" stroke="${a}" stroke-opacity="0.22" stroke-width="1"/>
@@ -330,7 +330,7 @@ async function descargarPDF() {
   await new Promise(r => setTimeout(r, 500));
 
   const { jsPDF } = window.jspdf;
-  const W = 88.9, H = 50.8;
+  const W = 90, H = 50; // 9 x 5 cm
   const opts = { scale:4, useCORS:true, allowTaint:true, backgroundColor:null, logging:false, imageTimeout:0, foreignObjectRendering:false };
 
   const pdf = new jsPDF({ orientation:"landscape", unit:"mm", format:[W,H] });
@@ -345,3 +345,6 @@ async function descargarPDF() {
   btn.disabled = false;
   btn.textContent = "Descargar PDF";
 }
+
+
+
