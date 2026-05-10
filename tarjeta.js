@@ -330,10 +330,9 @@ async function descargarPDF() {
   await new Promise(r => setTimeout(r, 500));
 
   const { jsPDF } = window.jspdf;
-  // Tamaño exacto 9 x 5 cm — sin orientation para que format mande
+  // 9 x 5 cm exactos en landscape
   const W_mm = 90, H_mm = 50;
 
-  // scale:4 garantiza ~240dpi al imprimir en 9x5cm
   const opts = {
     scale: 4,
     useCORS: true,
@@ -344,15 +343,19 @@ async function descargarPDF() {
     foreignObjectRendering: false
   };
 
-  // format:[ancho, alto] — jsPDF respeta el orden cuando no se pasa orientation
-  const pdf = new jsPDF({ unit:"mm", format:[W_mm, H_mm] });
+  // Crear PDF con pagina landscape 90x50mm
+  const pdf = new jsPDF({
+    orientation: "landscape",
+    unit: "mm",
+    format: [H_mm, W_mm]   // jsPDF espera [alto, ancho] cuando orientation=landscape
+  });
 
   // Pagina 1: Frente
   const c1 = await html2canvas(document.querySelector(".card-front"), opts);
   pdf.addImage(c1.toDataURL("image/png", 1.0), "PNG", 0, 0, W_mm, H_mm);
 
-  // Pagina 2: Reverso — mismo formato
-  pdf.addPage([W_mm, H_mm]);
+  // Pagina 2: Reverso
+  pdf.addPage([H_mm, W_mm], "landscape");
   const c2 = await html2canvas(document.querySelector(".card-back"), opts);
   pdf.addImage(c2.toDataURL("image/png", 1.0), "PNG", 0, 0, W_mm, H_mm);
 
