@@ -11,20 +11,20 @@ body{background:var(--body-bg);display:flex;flex-direction:column;align-items:ce
 .label{font-size:11px;color:#778;letter-spacing:2px;text-transform:uppercase;}
 .card{width:540px;height:300px;position:relative;overflow:hidden;border-radius:12px;box-shadow:0 20px 60px rgba(0,0,0,0.3),0 6px 20px rgba(0,0,0,0.15);transition:box-shadow 0.4s;}
 @media print{
-  @page { size: 90mm 50mm; margin: 0; }
-  html, body { width: 90mm; height: 50mm; margin: 0; padding: 0; background: white; }
-  .page-title, .label, .btn-row, .theme-selector, .card-wrapper > .label { display: none !important; }
-  .card-wrapper { margin: 0; padding: 0; gap: 0; page-break-after: always; break-after: page; }
+  @page { size: A4 landscape; margin: 10mm; }
+  html, body { margin: 0; padding: 0; background: white; }
+  .page-title, .label, .btn-row, .theme-selector { display: none !important; }
+  body { display: flex !important; flex-direction: column !important; align-items: center !important; justify-content: center !important; gap: 20mm !important; padding: 0 !important; min-height: 0 !important; }
+  .card-wrapper { page-break-after: always; break-after: page; display: flex !important; flex-direction: column !important; align-items: center !important; justify-content: center !important; width: 100% !important; height: 100vh !important; margin: 0 !important; padding: 0 !important; gap: 0 !important; }
+  .card-wrapper .label { display: none !important; }
   .card {
     width: 90mm !important;
     height: 50mm !important;
-    border-radius: 0 !important;
+    border-radius: 2mm !important;
     box-shadow: none !important;
-    position: relative !important;
     overflow: hidden !important;
-    display: block !important;
+    position: relative !important;
   }
-  body { gap: 0 !important; padding: 0 !important; display: block !important; }
   .card-wrapper:last-of-type { page-break-after: avoid; break-after: avoid; }
 }
 
